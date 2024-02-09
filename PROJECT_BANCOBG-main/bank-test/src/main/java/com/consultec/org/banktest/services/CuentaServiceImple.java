@@ -24,7 +24,6 @@ public class CuentaServiceImple implements ICuentaService {
     public List<CuentaDTO> fetchCuentaList() {
         List<CuentaDTO> cuentaDTO = new ArrayList<>();
 
-
         iCuentaRepository.findAll().forEach(cuentaEntity -> cuentaDTO.add(CuentaMap.mapCuenta(cuentaEntity)));
         return cuentaDTO;
     }

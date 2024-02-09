@@ -1,9 +1,18 @@
 package com.consultec.org.banktest.repository.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.util.Date;
 
+@Entity
+@Table(name = "cuentas")
 public class CuentaEntity {
 
+    @Id
+    @Column(name = "numero_cuenta")
     private String numero_cuenta;
 
     private String alias;
